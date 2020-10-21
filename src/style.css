@@ -1,0 +1,25 @@
+.App{
+    text-allign: center;
+    font-famiy: Arial;
+}
+.selected{
+    background: green !important;
+}
+.options{
+    padding: 8 px;
+    border: 3px solid #000;
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    
+}
+body{
+    display: flex;
+    justify-content: center;    
+    color:black;
+    font-family: 'Segoe UI',;
+    font-size: 18px;
+    background-color: whitesmoke;
+ }
