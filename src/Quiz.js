@@ -26,6 +26,7 @@ export class Quiz extends Component{
     nextQuestionHandler = () =>{
         const {userAnswer, answer, score} = this.state
         //alert(answer)
+        
         if(userAnswer == answer){
             this.setState({
                 score: score + 1
@@ -69,8 +70,7 @@ export class Quiz extends Component{
     finishHandler =() => {
 
         
-        if(this.state.currentIndex === QuizData.length - 1){
-            
+        if(this.state.currentIndex === QuizData.length - 1){            
             this.setState({
                 quizEnd:true
             })
@@ -124,11 +124,12 @@ export class Quiz extends Component{
                         </p>)
                         
                 }
-                <h2>{this.state.score}</h2>
+                <h2>Количество баллов: {this.state.score}</h2>
             {currentIndex < QuizData.length - 1 && 
             <button disabled = {this.state.disabled} onClick = {this.nextQuestionHandler}>
                 Дальше
             </button>}
+
             {currentIndex == QuizData.length - 1 &&
             <button onClick ={this.finishHandler} disabled = {this.state.disabled}>
                 Конец
