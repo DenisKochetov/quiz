@@ -116,12 +116,12 @@ export class Quiz extends Component{
                 {
                     options.map(option => 
                         <p key = {option.id} className={`options ${userAnswer === option? "selected": null}`} 
-                        onClick = {() => this.checkAnswer(option)}
-                        
+                        onClick = {() => this.checkAnswer(option)}                        
                         >
                             {option}
                             
                         </p>)
+                        
                         
                 }
                 <h2>Количество баллов: {this.state.score}</h2>
